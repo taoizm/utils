@@ -1,5 +1,13 @@
 function [Y,idx] = isomap(X,d,k)
 %ISOMAP performs non-linear dimensionality reduction using Isometric Mapping.
+%   Y = isomap(X,d,k) returns an n-by-d matrix of embedded points 
+%   obtained by computing geodesic distances in a low-dimensional 
+%   manifold using the k-nearest neighbor graph of X. 
+%
+%   [Y,idx] = isomap(X,d,k) also returns the indices of data points
+%   comprising the largest connected component of the k-nearest
+%   neighbor graph. If there are multiple largest connected components,
+%   ISOMAP throws an error.
 %
 % INPUT
 %   X - Data points, specified as an n-by-m matrix, where each row
@@ -10,10 +18,6 @@ function [Y,idx] = isomap(X,d,k)
 % OUTPUT
 %   Y   - Embedded points, returned as an n-by-d matrix.
 %   idx - Indices of data points comprising the largest connected component.
-%
-% Example:
-%
-%   [Y,idx] = isomap(X,2,12);
 %
 %   Note: The output is identical to that from ISOMAP in the Matlab Toolbox
 %   for Dimensionality Reduction created by Laurence van der Maaten
