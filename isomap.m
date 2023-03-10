@@ -72,7 +72,7 @@ D = G.distances;
 fprintf('\b done.\n  Elapsed time: %.3f seconds.\n',toc);
 
 %% Compute d-dimensional embedding
-fprintf('Computing d-dimensional embedding...\n');
+fprintf('Computing %d-dimensional embedding...\n',d);
 
 Y = cmdscale(D,d);
 
