@@ -24,7 +24,7 @@ end % dispNestedStruct
 
 %% Private functions
 function formattedStr = getFormattedStr(S,level,fieldWidth)
-    % GETSTRARRAY Recursively extracts the formatted display text
+    % GETFORMATTEDSTR Recursively extracts the formatted display text
     %     of a nested struct and returns a formatted string.
     arguments
         S struct {mustBeScalarOrEmpty(S)}
