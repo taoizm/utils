@@ -39,7 +39,7 @@ function formattedStr = getFormattedStr(S,level,fieldWidth)
 
     for ii=1:numel(fields)
         str = formattedTextArray{ii};
-        padding = repmat(' ', 1, fieldWidth(level) - strfind(str,':') + 1);
+        padding = repmat(' ', 1, fieldWidth(level) - find(str==':',1) + 1);
         formattedStr = [formattedStr padding str '\n'];
 
         % Recursively extract the field names
